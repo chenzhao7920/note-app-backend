@@ -1,6 +1,13 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document } from 'mongoose';
 
+// Create an interface for Note properties
+export interface INote {
+  _id: string,
+  title: string;
+  content: string;
+  createdAt: Date;
+}
 @Schema({ timestamps: true })
 export class Note extends Document {
   @Prop({ required: true })
