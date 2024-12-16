@@ -45,6 +45,43 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
+## Use Docker Setup MongoDB and run app
+Prerequisites: s
+- Docker installed on your machine
+- Docker Compose installed on your machine
+
+```bash
+# Build and start the containers
+$ docker-compose up --build
+
+# Stop containers
+$ docker-compose down
+
+# List running containers
+$ docker-compose ps
+
+# Rebuild and start specific servic
+$ docker-compose up -d --build backend
+```
+
+## View MongoDB Data using MongoDB Shell
+```bash
+# connect to container
+$ docker-compose exec mongodb mongosh
+
+# Show all databases
+$ show dbs
+
+# Switch to personal_notes_db database
+$ use personal_notes_db
+
+# Show all collections
+$ show collections
+
+# View all documents in a collection
+$ db.collectionName.find()
+```
+
 ## Run tests
 
 ```bash
